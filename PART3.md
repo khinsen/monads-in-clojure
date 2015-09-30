@@ -33,7 +33,7 @@ One benefit of having an ``m-zero`` in a monad is the possibility to use conditi
 The same construction is possible with ``domonad``:
 
 ```clj
-(domonad sequence
+(domonad sequence-m
   [a (range 5)
    :when (odd? a)]
   (* 2 a))
