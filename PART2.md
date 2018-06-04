@@ -152,7 +152,7 @@ To illustrate how ``m-lift`` works, I will show you an equivalent definition in 
 
 This shows that ``m-lift`` implies one call to ``m-result`` and one ``m-bind`` call per argument. The same definition using the sequence monad would yield a function that returns a sequence of all possible sums of pairs from the two input sequences.
 
-Exercice: The following function is equivalent to a well-known built-in Clojure function. Which one?
+Exercise: The following function is equivalent to a well-known built-in Clojure function. Which one?
 
 ```clj
 (with-monad sequence-m
