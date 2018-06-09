@@ -252,7 +252,7 @@ Here is an example of how you might want to use it:
 ```clj
 (with-monad sequence-m
    (defn ntuples [n xs]
-      (m-seq (replicate n xs))))
+      (m-seq (repeat n xs))))
 ```
 
 Try it out for yourself!
@@ -281,7 +281,7 @@ ascendants of a class:
 (with-monad sequence-m
   (defn n-th-generation
     [n cls]
-    ( (m-chain (replicate n parents)) cls )))
+    ( (m-chain (repeat n parents)) cls )))
 
 (n-th-generation 0 (class []))
 (n-th-generation 1 (class []))
