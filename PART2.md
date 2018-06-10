@@ -38,7 +38,7 @@ Using the monad library, the above loop is written as
   (* a b))
 ```
 
-Since we alread know that the domonad macro expands into a chain of ``m-bind``
+Since we already know that the domonad macro expands into a chain of ``m-bind``
 calls ending in an expression that calls ``m-result``, all that remains to be
 explained is how ``m-bind`` and ``m-result`` are defined to obtain the desired
 looping effect.

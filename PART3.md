@@ -59,7 +59,7 @@ example is
 The same construction is possible with ``domonad``:
 
 ```clj
-(domonad sequence
+(domonad sequence-m
   [a (range 5)
    :when (odd? a)]
   (* 2 a))
