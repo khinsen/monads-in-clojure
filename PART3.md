@@ -66,8 +66,8 @@ The same construction is possible with ``domonad``:
 ```
 
 Recall that ``domonad`` is a macro that translates a let-like syntax into a
-chain of calls to ``m-bind`` ending in a call to ``m-result``. The clause a
-``(range 5)`` becomes
+chain of calls to ``m-bind`` ending in a call to ``m-result``. The clause
+``a (range 5)`` becomes
 
 ```clj
 (m-bind (range 5) (fn [a] remaining-steps))
