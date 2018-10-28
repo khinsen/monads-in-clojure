@@ -173,7 +173,7 @@ returns the previous value:
 (defn set-val [key val]
   (fn [s]
     (let [old-val (get s key)
-      new-s   (assoc s key val)]
+          new-s   (assoc s key val)]
       [old-val new-s])))
 ```
 
