@@ -219,17 +219,17 @@ event (A and B) is p×q. Here is the definition of ``dist-m``:
 
 ```clj 
 (defmonad dist-m
-  [m-result (fn [v] {v 1})
-   m-bind   (fn [mv f]
-          (letfn [(add-prob [dist [x p]]
-                 (assoc dist x (+ (get dist x 0) p)))]
-            (reduce add-prob {}
-                (for [[x p] mv  [y q] (f x)]
-              [y (* q p)]))))
-   ])
+   [m-result (fn [v] {v 1})
+    m-bind   (fn [mv f]
+               (letfn [(add-prob [dist [x p]]
+                         (assoc dist x (+ (get dist x 0) p)))]
+                 (reduce add-prob {}
+                   (for [[x p] mv  [y q] (f x)]
+                     [y (* q p)]))))
+    ])
 ```
 
-As usually, the interesting stuff happens in ``m-bind``. Its first argument,
+As usual, the interesting stuff happens in ``m-bind``. Its first argument,
 ``mv``, is a map representing a probability distribution. Its second argument,
 ``f``, is a function representing the rest of the calculation. It is called
 for each possible value in the probability distribution in the for form. This
