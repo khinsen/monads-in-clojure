@@ -38,7 +38,7 @@ using functions. The following expression is in fact equivalent to the
 previous one:
 
 ```clj ( (fn [a] ( (fn [b] (* a b)) (inc a) ) ) 1 ) ``` The outermost level
-defines an anonymous function of a and calls with with the argument 1 – this
+defines an anonymous function of a and calls with the argument 1 – this
 is how we bind 1 to the symbol ``a``. Inside the function of ``a``, the same
 construct is used once more: the body of ``(fn [a] ...)`` is a function of
 ``b`` called with argument ``(inc a)``. If you don’t believe that this
